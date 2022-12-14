@@ -4,7 +4,6 @@ import java.math.BigDecimal;
 
 public class Employee {
 
-    public static final String WHITE_SPACE = " ";
     private final String name;
     private final String surname;
     private int age;
@@ -17,34 +16,28 @@ public class Employee {
     }
 
     public Employee(String name, String surname, int age) {
-        this.name = name;
-        this.surname = surname;
+        this(name,surname);
         this.age = age;
     }
 
-    public Employee(String name, String surname, int age, BigDecimal value) {
-        this.name = name;
-        this.surname = surname;
-        this.age = age;
-        this.basicSalary = value;
+    public Employee(String name, String surname, int age, BigDecimal basicSalary) {
+        this(name,surname,age);
+        this.basicSalary = basicSalary;
 
     }
 
-    public Employee(String name, String surname, int age, BigDecimal value1, BigDecimal value2) {
-        this.name = name;
-        this.surname = surname;
-        this.age = age;
-        this.basicSalary = value1;
-        this.bonus = value2;
+    public Employee(String name, String surname, int age, BigDecimal basicSalary, BigDecimal bonus) {
+        this(name,surname,age,basicSalary);
+        this.bonus = bonus;
 
     }
 
     public String getEmployeeInfo() {
-        return "Employee name : " + name + WHITE_SPACE + surname;
+        return "Employee name : " + name + " " + surname;
     }
 
     public String getEmployeeDetails() {
-        return "Employee details : " + name + WHITE_SPACE + surname + " is " + age;
+        return "Employee details : " + name + " " + surname + " is " + age;
     }
 
     public BigDecimal getBasicSalaryWithBonus() {
