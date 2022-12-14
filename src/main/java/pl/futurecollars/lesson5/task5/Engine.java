@@ -1,25 +1,25 @@
 package pl.futurecollars.lesson5.task5;
 
 public class Engine {
-    private boolean engineStarted;
+    private boolean started;
 
-    protected void startEngine() {
-        if (!engineStarted) {
-            engineStarted = true;
+    public void start() {
+        if (!started) {
+            started = true;
         }
     }
 
-    protected void stopEngine() {
-        if (engineStarted) {
-            engineStarted = false;
+    public void stop() {
+        if (started) {
+            started = false;
         }
     }
 
-    public boolean isEngineStarted() {
-        return engineStarted;
+    public boolean isStarted() {
+        return started;
     }
 
-    public void setEngineStarted(boolean engineStarted) {
-        this.engineStarted = engineStarted;
+    public void setStarted(boolean engineStarted) {
+        this.started = engineStarted;
     }
 }
